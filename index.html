@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>E commerce</title>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <section id="cartside">
+        <div class="row" style="background-color: white" id="it">
+          <div class="col">
+            <div class="card-body">
+              <h5 class="card-title">Item</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <h5 class="card-title">Price</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <p class="card-text">Quantity</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" id="cart11"></div>
+          </div>
+        </div>
+        <!-- <div class="row" style="background-color: white">
+          <div class="col">
+            <div class="card-body">
+              <img src="./img/Album 1.png" alt="" height="30px" width="30px" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <p>100$</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <p>1</p>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mr-auto justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+        <button class="btn btn-dark my-2 my-sm-0" onclick="openNav()">
+          Cart <span id="cart1"><sup></sup></span>
+        </button>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4 text-center">The Generics</h1>
+    </div>
+    <div
+      class="alert alert-success sticky-top"
+      role="alert"
+      id="message"
+      style="visibility: hidden"
+    ></div>
+    <h1 class="display-4 text-center">Music</h1>
+    <section id="product">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="./img/Album 1.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Album 1</h5>
+                <p class="card-text">$100</p>
+                <button class="btn-sm btn-primary" id="album1">
+                  add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="./img/Album 2.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Album 2</h5>
+                <p class="card-text">$100</p>
+                <button class="btn-sm btn-primary" id="album2">
+                  add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="./img/Album 3.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Album 3</h5>
+                <p class="card-text">$100</p>
+                <button class="btn-sm btn-primary" id="album3">
+                  add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="./img/Shirt.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">T Shirt</h5>
+                <p class="card-text">$100</p>
+                <button class="btn-sm btn-primary" id="shirt">
+                  add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h1 class="display-4 text-center">Merch</h1>
+      <hr />
+      <!-- <div class="jumbotron"></div> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="./img/Album 4.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Album 4</h5>
+                <p class="card-text">$100</p>
+                <button class="btn-sm btn-primary" id="album4">
+                  add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="./img/Cofee.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Coffee</h5>
+                <p class="card-text">$100</p>
+                <button class="btn-sm btn-primary" id="coffee">
+                  add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
