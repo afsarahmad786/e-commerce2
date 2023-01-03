@@ -73,3 +73,29 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
 }
+const parentNode = document.getElementById("product");
+
+window.addEventListener("load", () => {
+  axios.get("http://localhost:3000/products").then((products) => {
+    // console.log(products.data.products);
+    products.data.products.forEach((product) => {
+      console.log(product);
+      const productHtml = `
+      <div class="col">
+
+              <div id="album-${product.id}">
+                  <h3>${product.title}</h3>
+                  <div class="image-container">
+                      <img class="prod-images" src=${product.imageUrl} alt="">
+                  </div>
+                                  <div class="prod-details">
+                      <span>$<span>${product.price}</span></span>
+                      <button class="btn btn-primary" type='button'>ADD TO CART</button>
+                  </div>
+                  </div>
+              </div>
+              `;
+      parentNode.innerHTML += productHtml;
+    });
+  });
+});

@@ -46,7 +46,10 @@
   padding: 10px 15px;
   border: none;
 }
-
+img {
+  height: 200px;
+  width: 250px;
+}
 .openbtn:hover {
   background-color: #444;
 }
